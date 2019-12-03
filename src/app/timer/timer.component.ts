@@ -13,12 +13,22 @@ export class TimerComponent implements OnInit {
   time : string;
   isRed = false;
   constructor() { }
-
+  intervalId : any; // type  : Timer
   ngOnInit() {
-    setInterval(() => {
+    this.startTicker();
+  }
+
+  stopTimer(){
+    clearInterval(this.intervalId);
+  }
+
+  startTicker(){
+    this.intervalId = setInterval(() => {
       this.time = moment().locale('fr').format('hh:mm:ss');
       this.isRed = ! this.isRed;
     }, 1000);
   }
+
+
 
 }

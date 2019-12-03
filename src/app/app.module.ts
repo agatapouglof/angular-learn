@@ -5,18 +5,24 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TimerComponent } from './timer/timer.component';
 import { TimeFormatPipe } from './timer/time-format.pipe';
+import { DataService } from './shared/services/data.service';
+import { DatalistComponent } from './datalist/datalist.component';
+
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     TimerComponent,
-    TimeFormatPipe
+    TimeFormatPipe,
+    DatalistComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

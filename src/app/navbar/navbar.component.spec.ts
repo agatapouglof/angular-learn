@@ -29,7 +29,7 @@ describe('NavbarComponent', () => {
     expect(navs.length).toBe(1);
   });
 
-  it("have 3 button in the nav element", ()=> {
+  it("have 3 buttons in the nav element", ()=> {
     let compiled : HTMLElement = fixture.debugElement.nativeElement;
     // check if there is 3 buttons in the nav bar nav element by queryAll nav button
     expect(compiled.querySelectorAll("nav button").length).toBe(3);

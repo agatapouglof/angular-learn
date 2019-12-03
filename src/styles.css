@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+element {
+    --moment--green-color: #61b2a7;
+  }
+  .moment-green-bg {
+    background-color: #61b2a7;
+  }

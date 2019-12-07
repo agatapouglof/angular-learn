@@ -1,0 +1,24 @@
+<div class="my-5">
+    <div class="row">
+        <div class="col-6">
+            <div class="dropdown">
+                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Langue pour la date
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item" href="#" *ngFor="let elt of countryLists" (click)="selectDateLanguage(elt.alpha2Code)">
+                        <img src="{{elt.flag}}" alt="" height="20" width="20">
+                        {{elt?.languages[0].nativeName}}
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-6 text-center">
+            <h4 class="text-primary">
+                {{'today' | datelanguage:selectedCountryCode | uppercase}}
+            </h4>
+        </div>
+    </div>
+
+</div>

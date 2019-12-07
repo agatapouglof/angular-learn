@@ -2,6 +2,13 @@ import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { TimerComponent } from './timer/timer.component';
+import { DatelanguageComponent } from './datelanguage/datelanguage.component';
+import { DatalistComponent } from './datalist/datalist.component';
+import { DatelanguagePipe } from './shared/pipes/datelanguage.pipe';
+import { HttpClient } from '@angular/common/http';
+
+class HttpClientStub{
+}
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -9,8 +16,14 @@ describe('AppComponent', () => {
       declarations: [
         AppComponent,
         NavbarComponent,
-        TimerComponent
+        TimerComponent,
+        DatelanguageComponent,
+        DatalistComponent,
+        DatelanguagePipe
       ],
+      providers:[
+        { provide : HttpClient, useClass: HttpClientStub }
+      ]
     }).compileComponents();
   }));
 

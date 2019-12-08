@@ -1,0 +1,33 @@
+<div class="modal-header">
+    <h4 class="modal-title"> Ajouter un Evenement </h4>
+    <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+
+<div class="modal-body">
+    <p>Hello, {{name}}!</p>
+    <form class="form" (ngSubmit)="submitForm()" [formGroup]="eventForm">
+        <div class="form-group">
+            <label for="nom"> Nom de l'evenement </label>
+            <input class="form-control" type="text" name="nom " id="" formControlName="nom">
+        </div> 
+        <div class="form-group">
+            <label for="date" class=" form-label"> Date de l'evenement </label>
+            <input class="form-control" type="time" name="date " id="">
+        </div> 
+        <div class="form-group">
+            <label for="description" class=" form-label"> Description de l'evenement </label>
+            <textarea class="form-control" name="description">
+            </textarea>
+        </div>
+        <div class="text-center">
+            {{ eventForm.valid }}
+            <button type="submit" class="btn btn-success" [disabled]="eventForm.invalid">Valider</button>
+            <button type="reset" class="btn btn-danger mx-2">Effacer</button>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

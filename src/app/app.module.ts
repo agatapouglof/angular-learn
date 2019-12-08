@@ -8,13 +8,17 @@ import { TimeFormatPipe } from './timer/time-format.pipe';
 import { DataService } from './shared/services/data.service';
 import { DatalistComponent } from './datalist/datalist.component';
 
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { ListcontentComponent } from './datalist/listcontent/listcontent.component';
 import { DatelanguageComponent } from './datelanguage/datelanguage.component';
 
 import { HttpClientModule } from '@angular/common/http';
 import { CountriesService } from './shared/services/countries.service';
 import { DatelanguagePipe } from './shared/pipes/datelanguage.pipe';
+
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NeweventalertComponent } from './shared/components/neweventalert/neweventalert.component';
+
 
 
 
@@ -27,13 +31,17 @@ import { DatelanguagePipe } from './shared/pipes/datelanguage.pipe';
     DatalistComponent,
     ListcontentComponent,
     DatelanguageComponent,
-    DatelanguagePipe
+    DatelanguagePipe,
+    NeweventalertComponent
   ],
   imports: [
     BrowserModule,
+    ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgbModule
   ],
+  entryComponents: [NeweventalertComponent],
   providers: [DataService, CountriesService],
   bootstrap: [AppComponent]
 })

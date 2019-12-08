@@ -8,7 +8,7 @@ export class CountriesService {
 
   BASE_URL = "https://restcountries.eu/rest/v2/";
 
-  COUNTRIES_CODES = ['fra', 'gbr', 'pt', 'deu', 'jpn'];
+  COUNTRIES_CODES = ['fra', 'gbr', 'pt', 'deu', 'jpn', 'pol'];
 
   constructor(private httpClient: HttpClient) { }
 
